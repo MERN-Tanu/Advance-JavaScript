@@ -1,9 +1,12 @@
+# Function Expression
+```
 // function declaration
 function fun() {
   // some implementation
 }
 
 // function expression
+
 let f = function gun() {
   // some impl
 };
@@ -24,3 +27,4 @@ let a = (function () {
 );
 
 let y = () => {};
+```
