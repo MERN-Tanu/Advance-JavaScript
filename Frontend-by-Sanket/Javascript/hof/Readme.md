@@ -58,22 +58,22 @@ console.log(b);
 ```
 # Map function
 
-1. map is a higher order function avaliable with arrays
-   2.It takews a function as an argument -> f
-2. it returns an array in which every value is actually populated by calling
-3. function f with original array element as an argument.
-4. Every element of the original array is passed one in the argument function f
-5. Whatever is thge output for each individual element, we populate that output in an array.
-6. Map interanally iterates/loop over every element of the original array
-7. pass that element in the argument function f and then, store the returned value inside an array.
+1. Map is a higher order function avaliable with arrays
+   It takes a function as an argument -> f
+2. It returns an array in which every value is actually populated by calling
+3. Function f with original array element as an argument.
+4. Every element of the original array is passed one in the argument function -> f
+5. Whatever is the output for each individual element, we populate that output in an array.
+6. Map internally iterates/loop over every element of the original array
+7. Pass that element in the argument function f and then, store the returned value inside an array.
 
 ```
 function square(el) {
 // returns sqaure
-return el _ el;
+return el*el ;
 }
 function cube(x) {
-return x _ x \* x;
+return x *x* x;
 }
 function isEvenOdd(x) {
 if (x % 2 == 0) {
@@ -104,15 +104,16 @@ console.log(result2);
 
 # When to use Maps?
 - In any situations when we have to do an operation on every element of the array
-- and store the result of each operation
-- map can be a good option
+- And store the result of each operation
+- Map can be a good option
 
 - For Example:
 - Array of product objects.
+  
 ```
   const newArray = [9, 8, 7, 6, 5];
 
-- if the function that we are passing in map takes two arguments
+- If the function that we are passing in map takes two arguments
 - then first argument will be accessing the actual value
 - second argument will be accessing index of that value
 
@@ -135,14 +136,14 @@ console.log(value);
 ```
 
 # Filter Function
+
 - Filter is also a higher order function
 - Filter also loops over the array element
 - There is one special thing about filter ,i.e the argument function f which we have to pass inside
 - Filter should always return a boolean,otherwise output will be coverted to a boolean
--
 - Filter loops over every element,passes that element in the argument function and then if the output
-- of this function call is true,then it stores the orginal element in a new array otherwise
-- doesn't add this element to the array
+ of this function call is true,then it stores the orginal element in a new array otherwise
+ doesn't add this element to the array
 
 ```
   function oddOrEven(x) {
@@ -154,16 +155,16 @@ console.log(value);
   const result = arr.filter(oddOrEven);
   console.log(result);
 
----
+Output:  [2, 4, 6, 8]
 ```
 
 # Reduce is HOF available for array
 - Reduce also takes a function f as an argument,
-- What reduce does is, It is one by one goes to every element of the array
+- What reduce does , It is one by one goes to every element of the array
 - Say the current element is arr[i]
 - Reduce will pass this element to the function f, and accumulate the result of further function calls
-- With this particular result
-- 
+ With this particular result
+
 ```
 const arr = [1, 2, 3, 4, 5, 6];
 function sum(preResult, currResult) {
@@ -171,16 +172,20 @@ return preResult + currResult;
 }
 const result = arr.reduce(sum);
 console.log(result);
-
+```
+```
+/*
 - first element ->2
 - second element -> 3
 - third element -> 4
 - fourth element -> 5
 - fifth element -> 6
+*/
 
-  Cart -> [iphone {price: 100000,name:"iphone"},case{price:500,name:"backcove"},
-  tempered glass {price:300, name: tempered glass}]
-
+  /* Cart -> [iphone {price: 100000,name:"iphone"},case{price:500,name:"backcove"},
+  tempered glass {price:300, name: tempered glass}]*/
+  ```
+```
 function addPrice(preResult, currResult) {
 console.log(preResult, currResult);
 let newPrice = preResult.price + currResult.price;
@@ -195,5 +200,16 @@ let cart = [
 
 const totalPrice = cart.reduce(addPrice);
 console.log(totalPrice);
+
+Output: {price: 100000, name: 'iphone'}
+ 
+{price: 500, name: 'backcove'}
+VM2029:2 
+{price: 100500}
+ 
+{price: 300, name: 'temperedglass'}
+VM2029:14 
+{price: 100800}
+
 ```
----
+
