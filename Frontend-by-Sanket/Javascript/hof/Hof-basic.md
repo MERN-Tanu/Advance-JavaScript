@@ -1,9 +1,8 @@
 # HOF: Higher order function ->
-/***
+
  * there are functions which take anotehr function as arguments
  * these are called higher order functions
- *
- *  */
+
 
 ```
 function f(x, fn) {
