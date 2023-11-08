@@ -15,6 +15,7 @@ console.log("I am an Expression passed to a HOF");
 ```
 
 # Unsorted array
+```
 let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 // it's sorts the given array
 // [Expection]: This might arrange elements in inc order
@@ -38,7 +39,7 @@ let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
   console.log(arr);
 
 let b = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
-
+```
 # sort b in increasing order
 ```
 b.sort(function (a, b) {
