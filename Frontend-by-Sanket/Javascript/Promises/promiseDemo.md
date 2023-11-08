@@ -26,7 +26,8 @@ function createPromiseWithTimeout() {
     }, 1000);
   });
 }
-```
+
 
 let y = createPromiseWithTimeout();
 console.log(y);
+```
