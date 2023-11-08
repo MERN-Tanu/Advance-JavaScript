@@ -1,5 +1,5 @@
-// Higher order function: there are functions which take another function as arguments
-// these are called higher order function
+# Higher order function: there are functions which take another function as arguments
+# these are called higher order function
 
 ```
 function f(x, fn) {
@@ -16,7 +16,7 @@ console.log("I am an Expression passed to a HOF");
 });
 ```
 
-// Unsorted array
+# Unsorted array
 let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 // it's sorts the given array
 // [Expection]: This might arrange elements in inc order
@@ -41,7 +41,7 @@ let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 
 let b = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 
-// sort b in increasing order
+# sort b in increasing order
 b.sort(function (a, b) {
 // if a<b -> a-b will be negative -> if comparator function gives negative then a is placed before b (a<b)
 // if a>b -> a-b will be positive -> if comparator function gives positive the b is placed before a (a>b)
@@ -56,7 +56,7 @@ console.log(b);
 // index of the element is the key and the element it self is the value
 // ["abc","def","ghi"] -> {0:"abc",1:"def",2:"ghi"}
 
-// Map function
+# Map function
 
 1. map is a higher order function avaliable with arrays
    2.It takews a function as an argument -> f
@@ -102,7 +102,7 @@ console.log(result2);
 
 ```
 
-- When to use Maps?
+# When to use Maps?
 - In any situations when we have to do an operation on every element of the array
 - and store the result of each operation
 - map can be a good option
