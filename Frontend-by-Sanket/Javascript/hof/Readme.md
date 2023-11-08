@@ -42,6 +42,7 @@ let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 let b = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 
 # sort b in increasing order
+```
 b.sort(function (a, b) {
 // if a<b -> a-b will be negative -> if comparator function gives negative then a is placed before b (a<b)
 // if a>b -> a-b will be positive -> if comparator function gives positive the b is placed before a (a>b)
@@ -55,7 +56,7 @@ console.log(b);
 // arrays are also custom objects in JS
 // index of the element is the key and the element it self is the value
 // ["abc","def","ghi"] -> {0:"abc",1:"def",2:"ghi"}
-
+```
 # Map function
 
 1. map is a higher order function avaliable with arrays
@@ -109,7 +110,7 @@ console.log(result2);
 
 - For Example:
 - Array of product objects.
-
+```
   const newArray = [9, 8, 7, 6, 5];
 
 - if the function that we are passing in map takes two arguments
@@ -132,8 +133,9 @@ return resultnew;
 
 const value = customMapper(newArray, print);
 console.log(value);
+```
 
-- Filter Function
+# Filter Function
 - Filter is also a higher order function
 - Filter also loops over the array element
 - There is one special thing about filter ,i.e the argument function f which we have to pass inside
@@ -143,6 +145,7 @@ console.log(value);
 - of this function call is true,then it stores the orginal element in a new array otherwise
 - doesn't add this element to the array
 
+```
   function oddOrEven(x) {
   return x % 2 == 0;
   // returning a boolean
@@ -153,14 +156,16 @@ console.log(value);
   console.log(result);
 
 ---
+```
 
-- Reduce is HOF available for array
+# Reduce is HOF available for array
 - Reduce also takes a function f as an argument,
 - What reduce does is, It is one by one goes to every element of the array
 - Say the current element is arr[i]
 - Reduce will pass this element to the function f, and accumulate the result of further function calls
 - With this particular result
-
+- 
+```
 const arr = [1, 2, 3, 4, 5, 6];
 function sum(preResult, currResult) {
 return preResult + currResult;
@@ -191,5 +196,5 @@ let cart = [
 
 const totalPrice = cart.reduce(addPrice);
 console.log(totalPrice);
-
+```
 ---
