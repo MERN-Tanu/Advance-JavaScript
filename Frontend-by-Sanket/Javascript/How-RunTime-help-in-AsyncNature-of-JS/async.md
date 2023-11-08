@@ -1,4 +1,5 @@
-``` console.log("Hi we are starting");
+```
+console.log("Hi we are starting");
 for (let i = 0; i < 1000000000; i++) {
   // some task
 }
@@ -65,5 +66,6 @@ setTimeout(function exec() {
 for (var i = 0; i < 1000; i++) {
   // some task 10s
 }
-```
+
 console.log("end");
+```
