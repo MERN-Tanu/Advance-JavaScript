@@ -1,24 +1,34 @@
-Advance JavaScript Concepts :
+# Advance JavaScript Concepts :
 
-1.Coercion :
-In JavaScript, coercion is the automatic conversion of values from one data type to another, typically performed during operations or comparisons involving different data types. For example, if you try to add a string and a number using the "+" operator, JavaScript will convert the number to a string and concatenate the two values.
+# 1.Coercion :
+In JavaScript, coercion is the automatic conversion of values from one data type to another, typically performed during operations or comparisons involving different data types.
+For example, if you try to add a string and a number using the "+" operator, JavaScript will convert the number to a string and concatenate the two values.
+ 
 Coercion happens implicitly during operations or comparisons, where JavaScript automatically converts values to make them compatible. Coercion occurs automatically in JavaScript, allowing values of different data types to be used together in operations or comparisons.
 
-There are two types of coercion in JavaScript:
+# There are two types of coercion in JavaScript:
 
+# implicit
 implicit and explicit. Implicit coercion happens automatically, while explicit coercion is done by the developer.
-Implicit coercion is the most common type of coercion. It happens automatically when JavaScript needs to convert a value from one data type to another. For example, if you try to add a string and a number using the "+" operator, JavaScript will convert the number to a string and concatenate the two values.
-Explicit coercion is done by the developer. It is usually used to force a value to a specific data type. For example, if you want to convert a string to a number, you can use the Number() function.
+Implicit coercion is the most common type of coercion.
+It happens automatically when JavaScript needs to convert a value from one data type to another.
+For example, if you try to add a string and a number using the "+" operator, JavaScript will convert the number to a string and concatenate the two values.
+
+# Explicit
+Explicit coercion is done by the developer. It is usually used to force a value to a specific data type.
+For example, if you want to convert a string to a number, you can use the Number() function.
 Coercion can be used to make JavaScript more flexible and allow developers to use different data types together. However, it can also lead to errors if the developer is not careful.
 Type Coercion refers to the process of automatic or implicit conversion of values from one data type to another. This includes conversion from Number to String, String to Number, Boolean to Number etc. when different types of operators are applied to the values.
 
-In case the behavior of the implicit conversion is not sure, the constructors of a data type can be used to convert any value to that datatype, like the Number(), String() or Boolean() constructor.
+In case the behavior of the implicit conversion is not sure, the constructors of a data type can be used to convert any value to that datatype,
+
+like the Number(), String() or Boolean() constructor.
 
 E.g:
 
 1. Number to String Conversion:
 
-```Javascipt
+``` Javascipt
    // The Number 10 is converted to
    // string '10' and then '+'
    // concatenates both strings
@@ -44,7 +54,7 @@ true10
 
 E.g:
 
-```Javascipt
+``` Javascipt
 // The string '5' is converted
 // to number 5 in all cases
 // implicitly
@@ -68,7 +78,7 @@ Output:
 
 3. Boolean to Number: When a Boolean is added to a Number, the Boolean value is converted to a number as it is safer and easier to convert Boolean values to Number values. A Boolean value can be represented as 0 for ‘false’ or 1 for ‘true’. Some examples of this are shown below.
 
-```Javascipt
+``` Javascipt
  The Boolean value true is
  converted to number 1 and
  then operation is performed
@@ -91,7 +101,7 @@ Output:
 1. The Equality Operator: The equality operator (==) can be used to compare values irrespective of their type. This is done by coercing a non-number data type to a number. Some examples of this are shown below:
    Example:
 
-```Javascipt
+``` Javascipt
 // Should output 'true' as string '10'
 // is coerced to number 10
 var x = (10 == '10');
