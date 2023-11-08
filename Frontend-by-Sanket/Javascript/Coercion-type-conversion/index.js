@@ -7,10 +7,11 @@ console.log(10 + NaN);
 console.log(10 + true);
 console.log(10 + false);
 console.log(10 + "tanu");
-// console.log(10 - $);
+console.log(10 - $);
 console.log(10 - 10);
-
+```
 # Subtraction
+```
 console.log(10 - null);
 console.log(10 - undefined);
 console.log(10 - NaN);
