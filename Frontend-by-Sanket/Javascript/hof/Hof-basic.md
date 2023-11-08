@@ -11,7 +11,6 @@ function f(x, fn) {
    * fn -> function
    */
   console.log(x);
-  console.log(fn);
   fn();
 }
 
