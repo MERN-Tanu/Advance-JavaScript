@@ -1,3 +1,4 @@
+```
 function fun(fn) {
   console.log("welcome to fun");
 }
@@ -8,3 +9,4 @@ fun(function askingAboutFun() {
 });
 
 //  for recursive cases named function expression are also helpful
+```
