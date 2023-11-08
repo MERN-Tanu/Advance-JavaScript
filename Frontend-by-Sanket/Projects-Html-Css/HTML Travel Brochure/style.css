@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.heading {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pict {
+}

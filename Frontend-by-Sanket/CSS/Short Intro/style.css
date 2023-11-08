@@ -1,0 +1,145 @@
+/* declaration of variables in a CSS,so we can access anywhere in our program */
+:root {
+  --cream: #b57114;
+  --FigBalsamic: #520120;
+  --green: #08403e;
+  --taupe: #706513;
+  --Caramel: #15f5d5;
+  --lightsalmon: #ffa07a;
+  --salmon: #fa8072;
+  --red: #ff0000;
+  --darkred: #8b0000;
+  --lightyellow: #ffffe0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+  /* here, I am accessing the variable by var(varname) */
+  background-color: var(--lightyellow);
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+#intro p {
+  font-size: 1.5rem;
+  color: var(--FigBalsamic);
+  line-height: 1.5;
+  padding-bottom: 5rem;
+}
+
+.name span {
+  display: block;
+  color: var(--taupe);
+  font-size: 4rem;
+}
+
+.profile {
+  padding-bottom: 1rem;
+}
+
+#intro h2 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.experience ul {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.experience li {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.experience a {
+  color: aliceblue;
+}
+
+#hire {
+  background-color: var(--taupe);
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#hire p:last-child {
+  margin-top: 3rem;
+}
+
+nav {
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  color: red;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: end; */
+/* gap: 2rem;
+}
+
+nav a:hover {
+  color: var(--FigBalsamic);
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+nav li:first-child {
+  /* flex-grow: 1; we will write a media queries to bring this back */
+/* font-size: 1.5rem;
+  flex-basis: 100%;
+  margin-left: 3rem;
+}
+
+.button {
+  background-color: #efeeea;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.button:hover {
+  color: wheat;
+  background-color: palevioletred;
+}
+
+@media (min-width: 600px) {
+  nav li:first-child {
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+}
+
+.section-tor {
+  height: 2px;
+  background: var(--lightsalmon);
+}  */

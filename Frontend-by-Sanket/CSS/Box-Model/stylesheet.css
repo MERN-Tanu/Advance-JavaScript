@@ -1,0 +1,12 @@
+#demo {
+  border: 1px solid black;
+  border-radius: 2px;
+  border-color: blue;
+  border-style: dashed;
+  border-top: 2px;
+  border-left: 3px;
+  border-width: 1px;
+  border-right: 2px;
+  border-collapse: collapse;
+  border-spacing: 2px;
+}

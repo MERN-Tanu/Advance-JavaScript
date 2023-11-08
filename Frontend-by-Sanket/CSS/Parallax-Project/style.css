@@ -1,0 +1,130 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.first-image,
+.second-image,
+.third-image,
+.fourth-image {
+  background-position: center;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+.first-image {
+  background-image: url(images/images/diya4.webp);
+  min-height: 500px;
+  opacity: 0.8;
+}
+
+.second-image {
+  background-image: url(images/images/f7.webp);
+  min-height: 500px;
+}
+
+.third-image {
+  background-image: url(images/images/f5.webp);
+  min-height: 500px;
+}
+
+.fourth-image {
+  background-image: url(images/images/f6.webp);
+  min-height: 500px;
+  opacity: 0.8;
+}
+
+section {
+  text-align: center;
+  padding: 3rem 5rem;
+}
+
+.section-light {
+  background-color: aliceblue;
+  color: black;
+}
+
+section-dark {
+  background-color: black;
+  color: white;
+}
+
+.image {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+}
+
+.image div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: blanchedalmond;
+}
+
+.first-image > div {
+  /* color: black;
+  background-color: rgb(244, 240, 244); */
+  padding: 20px;
+  width: 100%;
+}
+
+.first-image span {
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.second-image > div {
+  /* color: rgb(4, 4, 5);
+  background-color: rgb(244, 244, 237); */
+  padding: 20px;
+  width: 100%;
+}
+
+.second-image span {
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.third-image > div {
+  /* color: rgb(4, 4, 5);
+  background-color: rgb(236, 236, 224); */
+  padding: 20px;
+  width: 100%;
+}
+
+.third-image span {
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+.fourth-image > div {
+  /* color: rgb(4, 4, 5);
+  background-color: rgb(241, 241, 232); */
+  padding: 20px;
+  width: 100%;
+}
+
+.fourth-image span {
+  color: black;
+  background-color: white;
+  padding: 20px;
+}

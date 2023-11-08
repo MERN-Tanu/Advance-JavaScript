@@ -1,0 +1,40 @@
+* {
+  background-color: rgb(161, 255, 127);
+  color: crimson;
+  font-size: xx-large;
+  text-align: center;
+}
+
+div > span {
+  color: rgb(255, 0, 0);
+  text-decoration: dashed;
+}
+
+h4 {
+  color: brown;
+}
+
+a:visited {
+  color: darkblue;
+}
+
+ul {
+  /* margin: 0 auto 0 auto; */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div .extra {
+  text-decoration: line-through;
+  text-decoration-line: underline;
+}
+
+div::before {
+  content: "...";
+}
+
+div::after {
+  content: "...";
+}

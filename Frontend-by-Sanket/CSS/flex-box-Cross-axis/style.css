@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#parent {
+  border: 10px solid black;
+  background-color: chartreuse;
+  display: flex;
+  height: 500px;
+  flex-flow: row nowrap;
+  /* To arrange the elements on main axis */
+  justify-content: start;
+
+  /* To arrange the elements on cross axis */
+  /* align-items: start; */
+  align-items: center;
+  align-content: space-evenly;
+}
+
+#parent div {
+  border: 3px solid blue;
+  padding: 20px;
+  background-color: beige;
+  min-width: 100px;
+  /* max-width: 200px; */
+  max-height: 100px;
+  /* min-height: 100px; */
+}
+
+#child1 {
+  /* the width of box1 will increase by 50% */
+  /* flex-basis: 50%; */
+  flex-grow: 1;
+}
+
+#child2 {
+  /* box2 will expand by 2 */
+  flex-grow: 2;
+}
