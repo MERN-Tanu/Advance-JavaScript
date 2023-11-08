@@ -13,6 +13,7 @@ b). Execution : To run the Code
 
 # BlockScope: let and const are block scope keyword
 
+```
 if(true){
 var x = 10;
 }
@@ -26,7 +27,7 @@ var x =10;
 console.log(x);
 
 output: undefined
-
+```
 # Function Scope: var keyword is function and global scope
 
 // let won't allow re-Declarartion
@@ -44,7 +45,7 @@ These are function depends and opearte on other function
 higher order function takes another function as an argument or return a function as argument and then execute the logic.
 
 # Example:
-
+```
 function gun(){
 
 <!-- some logic -->
@@ -59,7 +60,7 @@ function fun(gun){
 
 gun();
 }
-
+```
 # Map Function
 
 1. Map is a higher order function avaliable with arrays.
