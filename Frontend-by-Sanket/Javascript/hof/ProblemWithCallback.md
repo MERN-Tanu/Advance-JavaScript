@@ -8,6 +8,7 @@
  * Inversion of control
  */
 
+```
 function doTask(fn, x) {
   // whole implementation is done by team A
   // calling my callback with the square of x
@@ -20,3 +21,4 @@ doTask(function exec(num) {
   // this is inversion of control
   console.log("Woah num is", num);
 }, 9);
+```
