@@ -1,3 +1,5 @@
+# SetInterval
+```
 let count = 0;
 let y = setInterval(function exec() {
   count++;
@@ -6,3 +8,4 @@ let y = setInterval(function exec() {
     clearInterval(y);
   }
 }, 2000);
+```
