@@ -5,6 +5,7 @@
 
 // ------- Promise -------
 
+```
 function createPromiseWithTimeout() {
   return new Promise(function executor(resolve, reject) {
     setTimeout(function () {
@@ -25,6 +26,7 @@ function createPromiseWithTimeout() {
     }, 1000);
   });
 }
+```
 
 let y = createPromiseWithTimeout();
 console.log(y);
