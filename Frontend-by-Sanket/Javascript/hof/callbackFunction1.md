@@ -1,4 +1,6 @@
-function fun(x, fn) {
+# CallBack
+
+``` function fun(x, fn) {
   for (let i = 0; i < x; i++) {
     console.log(x);
   }
@@ -9,3 +11,4 @@ fun(10, function exec(num) {
   console.log(num);
   //    calling fun
 });
+```
