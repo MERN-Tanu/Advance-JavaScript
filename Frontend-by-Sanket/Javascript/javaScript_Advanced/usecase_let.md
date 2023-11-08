@@ -1,3 +1,6 @@
+# Let keyword use
+
+```
 function fun() {
   for (var i = 0; i < 10; i++) {
     // do something
@@ -32,3 +35,4 @@ let x = 10;
 // var allow re-Declaration
 var y = 10;
 var y = 11;
+```
