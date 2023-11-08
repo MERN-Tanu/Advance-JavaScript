@@ -39,9 +39,9 @@ let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
   console.log(arr);
 
 let b = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
-```
+
 # sort b in increasing order
-```
+
 b.sort(function (a, b) {
 // if a<b -> a-b will be negative -> if comparator function gives negative then a is placed before b (a<b)
 // if a>b -> a-b will be positive -> if comparator function gives positive the b is placed before a (a>b)
