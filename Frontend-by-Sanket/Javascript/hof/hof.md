@@ -1,6 +1,7 @@
-//  Higher order function: there are functions which take another function as arguments
-//  these are called higher order function
+# Higher order function: there are functions which take another function as arguments
+#  these are called higher order function
 
+```
 function f(x, fn) {
   // x = number
   // fn = function
@@ -12,12 +13,15 @@ f(10, function exec() {
   console.log("I am an Expression passed to a HOF");
 });
 
-// Unsorted array
+```
+
+# Unsorted array
+```
 let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 // it's sorts the given array
 // [Expection]: This might arrange elements in inc order
 //  Default implementation of arr.sort() is going to sort my array in lexicographical order
-/**
+
  * 0 -> A
  * 1 -> B
  * 2 -> C
@@ -30,11 +34,12 @@ let arr = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
  * 9 -> J
  * 10 -> K
  * ...
-//  * [B,BA,J,BAA,BB,BC,BD,BE,C,D] iF WE ARRANGE IT ACCORDING TO DICTIONARY
- * **/
+//  [B,BA,J,BAA,BB,BC,BD,BE,C,D] iF WE ARRANGE IT ACCORDING TO DICTIONARY
+
 arr.sort();
 console.log(arr);
-
+```
+```
 let b = [1, 10, 9, 100, 11, 12, 13, 14, 2, 3];
 
 // sort b in increasing order
@@ -45,3 +50,4 @@ b.sort(function (a, b) {
   // sort is a HOF ,,the sort function takes a comparator function as argument
 });
 console.log(b);
+```
