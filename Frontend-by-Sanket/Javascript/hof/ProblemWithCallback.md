@@ -1,12 +1,8 @@
-/***
- * 1. Inversion of control
- * 2. Callback hell -> readibility
- *
- */
 
-/***
- * Inversion of control
- */
+# 1. Inversion of control
+# 2. Callback hell -> readibility
+
+ # Inversion of control
 
 ```
 function doTask(fn, x) {
