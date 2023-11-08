@@ -7,6 +7,7 @@
  * With this particular result
  */
 
+```
 const arr = [1, 2, 3, 4, 5, 6];
 function sum(preResult, currResult) {
   return preResult + currResult;
@@ -14,18 +15,21 @@ function sum(preResult, currResult) {
 const result = arr.reduce(sum);
 console.log(result);
 
+```
+
+
 /***
- * first element ->2
+ * first element  -> 2
  * second element -> 3
  * third  element -> 4
  * fourth element -> 5
  * fifth element  -> 6
  */
-/***
- *Cart -> [iphone {price: 100000,name:"iphone"},case{price:500,name:"backcove"},
-           tempered glass {price:300, name: tempered glass}]
- */
 
+Cart -> [iphone {price: 100000,name:"iphone"},case{price:500,name:"backcove"},
+           tempered glass {price:300, name: tempered glass}]
+
+```
 function addPrice(preResult, currResult) {
   console.log(preResult, currResult);
   let newPrice = preResult.price + currResult.price;
@@ -40,3 +44,4 @@ let cart = [
 
 const totalPrice = cart.reduce(addPrice);
 console.log(totalPrice);
+```
