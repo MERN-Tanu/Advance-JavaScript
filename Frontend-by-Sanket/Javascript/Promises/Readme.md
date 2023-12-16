@@ -95,3 +95,16 @@ Example:
 ![1699286846225](image/Readme/1699286846225.png)
 
 ![1699286871803](image/Readme/1699286871803.png)
+
+```
+Promises constructor :  1. value : default -> undefined
+           2. State : default -> Pending
+new Promise(function exec(resolve,reject){
+
+})
+
+1. At the time, when the constructor generates a new promises object, it also generates a pair of function, called as resolve & reject.
+2. Generally, the executor callback, wraps some async/sync operation.
+3. The executor is called sync.
+
+```
