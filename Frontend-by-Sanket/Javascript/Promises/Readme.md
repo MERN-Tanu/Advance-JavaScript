@@ -103,8 +103,14 @@ new Promise(function exec(resolve,reject){
 
 })
 
-1. At the time, when the constructor generates a new promises object, it also generates a pair of function, called as resolve & reject.
+1. At the time, when the constructor generates a new promises object,
+ it also generates a pair of function, called as resolve & reject.
 2. Generally, the executor callback, wraps some async/sync operation.
 3. The executor is called sync.
+
+Consuming a Promise :
+let p =fetch("");
+
+- attach the functionality that we need to execute once the promise is fulfilled or rejected.
 
 ```
