@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-Manipulation</title>
+  </head>
+  <body>
+    <ul id="element">
+      <!-- li -> li[0] (1. Hi Tanu Singh,hope you are doing well,welcome to Kanpur)-->
+      <li class="list-item">
+        1. Hi Tanu Singh,hope you are doing well,welcome to Kanpur
+      </li>
+      <li class="list-item">
+        2. Hi Tanu Singh,hope you are doing well,welcome to Kanpur
+      </li>
+      <li class="list-item">
+        3. Hi Tanu Singh,hope you are doing well,welcome to Kanpur
+      </li>
+      <li class="list-item">
+        4. Hi Tanu Singh,hope you are doing well,welcome to Kanpur
+      </li>
+      <p>Hello All</p>
+      <h1>Hi Friends</h1>
+    </ul>
+
+    <table>
+      <!-- table row -->
+      <tr>
+        <td>First [0]</td>
+
+        <td>second [1]</td>
+      </tr>
+
+      <tr>
+        <td>third [2]</td>
+        <td>Fourth [3]</td>
+      </tr>
+    </table>
+
+    <button id="clickBtn">Click me</button>
+    <script>
+      // Root Node
+      console.log(document.documentElement);
+      console.log(document.body);
+      console.log(document.head);
+
+      // Children
+      console.log(document.body.childNodes);
+      // console.log(document.body.lastChild);
+
+      // Sibling
+      const ulTag = document.body.children[0];
+      // const firstli = ulTag.children[0];
+      const secondli = ulTag.children[5];
+      console.log(secondli.previousElementSibling.textContent);
+
+      // Table DOM Manipulation
+
+      /**
+       *
+       * **/
+      // const tableTag = document.body.children[1];
+      // console.log(
+      //   (tableTag.tBodies[0].rows[1].cells[1].style = "background-color:blue;")
+      // );
+
+      //  ID Search
+      // element.style.background = "red";
+
+      // const ulTag1 = document.getElementById("element");
+      // ulTag1.style.background = "red";
+
+      // listItem = document.getElementsByClassName("list-item");
+      // console.log(document.getElementsByTagName("table"));
+
+      // querySelector
+      // const listItems = document.querySelector(".list-item");
+      // console.log(listItems);
+
+      // querySelectorALL
+      const listItems = document.querySelectorAll(".list-item");
+      console.log(listItems);
+    </script>
+  </body>
+</html>
