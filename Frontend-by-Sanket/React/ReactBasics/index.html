@@ -19,11 +19,21 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <script>
+      // React Native library helps you to prepare Mobile App
+      // React DOM library helps you to interact with web Browser
       const App = () => {
         return React.createElement(
-          "div",
-          {},
-          React.createElement("h1", {}, "Welcome to First Lecture of React")
+          //this is the Parent React.createElement
+          "div", //this will tell you the type
+          {}, // Props : Properties
+
+          //this is children : React.createElement
+          React.createElement(
+            "h1", //this is heading which we are inserting into our DOM
+            {}, // this is the Props : Properties
+
+            "Welcome to First Lecture of React" // Content we are inserating inside <h1></h1>
+          )
         );
       };
 
