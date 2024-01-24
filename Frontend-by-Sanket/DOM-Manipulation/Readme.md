@@ -1,4 +1,4 @@
-#DOM In JavaScript :
+# DOM In JavaScript :
 
 ![1699808234077](image/Readme/1699808234077.png)
 
