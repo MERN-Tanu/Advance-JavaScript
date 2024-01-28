@@ -1,10 +1,10 @@
-DOM IN JS
+# DOM In JavaScript :
 
 ![1699808234077](image/Readme/1699808234077.png)
 
 ![1699808551812](image/Readme/1699808551812.png)
 
-Methods of Document Object:
+```Methods of Document Object:
 
 write(“string”): Writes the given string on the document.
 
@@ -15,6 +15,7 @@ getElementsByName(): returns all the elements having the given name value.
 getElementsByTagName(): returns all the elements having the given tag name.
 
 getElementsByClassName(): returns all the elements having the given class name.
+```
 
 ```
 <table>
@@ -34,9 +35,9 @@ getElementsByClassName(): returns all the elements having the given class name.
 
 ![1699808647931](image/Readme/1699808647931.png)
 
-# DOM: Document Object Mmodel
+# DOM: Document Object Model
 
-Document: the document that we are talking about is the html document.
+**Document: the document that we are talking about is the html document.**
 
 ```
 <html>
@@ -47,6 +48,7 @@ Document: the document that we are talking about is the html document.
 
 ```
 
+```
 Script tag :
 
 Browser fetch the html page.
@@ -58,10 +60,11 @@ While parsing it encounters a script tag refering to external file.
 Browser request the external file and block the parser, Hence parsing of html is halted.
 
 Once the script is downloaded, it is executed subsequently and parser restarted.
+```
 
 # DOCUMENT :
 
-All the DOM properties available to us via browser.
+**All the DOM properties available to us via browser.**
 
 # Methods in DOM:
 
@@ -107,7 +110,7 @@ All the DOM properties available to us via browser.
 
 ```
 
-1. getElementById() :
+**1. getElementById() :**
 
 ```
 <!DOCTYPE html>
@@ -158,13 +161,13 @@ o/p:
 
 ![1701698318243](image/Readme/1701698318243.png)
 
-a. document.getElementById("top-main-text").style.cssText = "color:red; font-size:100px; letter-spacing:10px";
+```a. document.getElementById("top-main-text").style.cssText = "color:red; font-size:100px; letter-spacing:10px";```
 
-o/p:
+**o/p:**
 
 ![1701708023002](image/Readme/1701708023002.png)
 
-2. getElementByClassName():
+***2. getElementByClassName():**
 
 ```
 <!DOCTYPE html>
@@ -275,7 +278,7 @@ o/p:
 
 ![1701701316426](image/Readme/1701701316426.png)
 
-1. getElementsByTagName():
+**1. getElementsByTagName():**
 
 ```
 const ele = document.getElementsByTagName("p");
@@ -294,7 +297,7 @@ o/p:
 
 ![1701702918718](image/Readme/1701702918718.png)
 
-5. querySelector() :
+**5. querySelector() :**
 
 ```
 <!DOCTYPE html>
@@ -351,7 +354,7 @@ o/p :
 
 ![1701704453557](image/Readme/1701704453557.png)
 
-6. querySelectorAll() :
+**6. querySelectorAll() :**
 
 ```
 <!DOCTYPE html>
@@ -406,34 +409,34 @@ o/p:
 
 ![1701705780494](image/Readme/1701705780494.png)
 
-7. innerHTML():
+**7. innerHTML():**
 
    o/p:
    ![1701754456401](image/Readme/1701754456401.png)
 
-8. innerText():
+**8. innerText():**
 
 o/p:
 ![1701754541082](image/Readme/1701754541082.png)
 
-9. createElement():
+**9. createElement():**
 
    o/p:
    ![1701757050984](image/Readme/1701757050984.png)
 
-10. textContent() :
+**10. textContent() :**
 
 o/p:
 ![1701757106785](image/Readme/1701757106785.png)
 
-11. How to create element inside div?
+**11. How to create element inside div?**
 
 o/p: ![1701757699200](image/Readme/1701757699200.png)
 
     o/p:
     ![1701757588275](image/Readme/1701757588275.png)
 
-12. appendChild() and prepend() :
+**12. appendChild() and prepend() :**
 
 o/p:
 ![1701758050404](image/Readme/1701758050404.png)
