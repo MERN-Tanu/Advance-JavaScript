@@ -48,7 +48,7 @@ export default function PostCard({ authorFirstName, image, content }) {
         //     <MoreVertIcon />
         //   </IconButton>
         // }
-        title="Shrimp and Chorizo Paella"
+        title={authorFirstName}
         subheader="September 14, 2016"
       />
       {image.length > 0 ? (

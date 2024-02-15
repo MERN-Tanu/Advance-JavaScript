@@ -20,7 +20,6 @@ export default function RowAndColumnSpacing() {
     <Box
       container
       display={"flex"}
-      bgcolor={"deepskyblue"}
       flexWrap={"wrap"}
       sx={{ width: "100%", mt: "3rem" }}>
       <Grid

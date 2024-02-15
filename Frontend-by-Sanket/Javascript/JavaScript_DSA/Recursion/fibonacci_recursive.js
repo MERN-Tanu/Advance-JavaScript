@@ -4,4 +4,4 @@ function f(n) {
   return f(n - 1) + f(n - 2);
 }
 
-console.log(f(6));
+console.log(f(22));
