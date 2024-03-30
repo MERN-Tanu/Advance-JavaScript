@@ -18,3 +18,9 @@ f(10, function exec() {
   console.log("I am an expression passed to HOF");
 });
 ```
+
+```
+output:   10
+         I am an expression passed to HOF
+
+```
