@@ -10,7 +10,8 @@ function f(x, fn) {
    * x->number
    * fn -> function
    */
-  console.log(x);
+  console.log(x); // 10
+  console.log(fn); // [Functions: exec]
   fn();
 }
 
