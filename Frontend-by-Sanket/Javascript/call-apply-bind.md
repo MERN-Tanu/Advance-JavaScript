@@ -1,5 +1,44 @@
 **The call and apply Methods**
 
+**Example 0**
+```js
+ let name = {
+       firstname : "tanu",
+       lastname: "Singh",
+    printFullName : function(hometown,state){
+           // this : refer to (name) (this :calling context)
+             consol.log(this.firstnmae + "" + this.lastname + "from " + hometown + "," + state );
+}
+}
+
+// name.printFullName();
+printFullName.call(name,"Kanpur","UP");
+
+let name2 = {
+    firstname : "tannnu",
+    lastname: "Yadav",
+}
+
+// function borrowing
+// name.printFullName.call(name2,"Mumbai","Maharashtra");
+
+// 1. call method
+printFullName.call(name2,"Mumbai",Maharashtra");
+
+// 2. apply method (name2,[array of list will pass in apply method in 2nd argument])
+
+printFulName.apply(name2,["Mumbai","Maharashtra"]);
+
+// bind method
+
+let printMyName = printFullName.bind(name1,"Mumbai","Maharashta");
+console.log(printFullName);
+printMyName();
+
+```
+
+
+
 **Example: 1**
 
 ```JS
