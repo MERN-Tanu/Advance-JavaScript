@@ -1,3 +1,10 @@
+# CI CD
+
+```
+https://github.com/singhsanket143/CRM_App_Backend_TS/blob/master/README.md
+```
+
+
 **The call and apply Methods**
 
 **Example 0**
