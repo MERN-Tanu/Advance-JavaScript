@@ -4,6 +4,13 @@ JavaScript Link : https://coderdost.github.io/
 
 # Promises in JavaScript
 
+1. Before promise we used to depend on callback functions which would result in 
+1.) Callback Hell (Pyramid of doom)  2.) Inversion of control
+2. Inversion of control is overcome by using promise.
+   
+1) A promise is an object that represents eventual completion/failure of an asynchronous operation.
+2) A promise has 3 states: pending | fulfilled | rejected.
+
 Promises in JavaScript are a pattern for handling asynchronous operations. They provide a cleaner and more readable way to deal with asynchronous code compared to traditional callback functions. A promise represents the eventual completion or failure of an asynchronous operation and its resulting value.
 
 A promise has three states:
