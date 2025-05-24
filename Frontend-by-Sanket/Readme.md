@@ -1,4 +1,27 @@
-<img width="976" alt="image" src="https://github.com/user-attachments/assets/46eeda9a-20e9-45ef-ba47-5d1612b708fd" />
+```js
+import { useState } from "react";
+
+function LogicUseStateArray() {
+  const [items, setItem] = useState([]);
+  console.log(items);
+  console.log(items.length);
+  return (
+    <>
+      <hr />
+      <h2>Learn useState with Non-primitive types- Array:</h2>
+      <h2> {items}</h2>
+      <br />
+      <button onClick={() => setItem([...items, items.length + 1])}>
+        Click me
+      </button>
+    </>
+  );
+}
+
+export default LogicUseStateArray;
+
+
+```
 
 ```js
 import React, { useState } from "react";
@@ -86,7 +109,7 @@ b). Execution : To run the Code
 
 # BlockScope: let and const are block scope keyword
 
-```
+```js
 if(true){
 var x = 10;
 }
@@ -103,8 +126,8 @@ output: undefined
 ```
 # Function Scope: var keyword is function and global scope
 
-// let won't allow re-Declarartion
-// var allow re-Declaration
+ let won't allow re-Declarartion
+ var allow re-Declaration
 
 # IIFE = Immediate invoked fuunction expression
 
@@ -118,7 +141,7 @@ These are function depends and opearte on other function
 higher order function takes another function as an argument or return a function as argument and then execute the logic.
 
 # Example:
-```
+```js
 function gun(){
 
 <!-- some logic -->
