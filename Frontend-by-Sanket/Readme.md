@@ -1,3 +1,76 @@
+<img width="976" alt="image" src="https://github.com/user-attachments/assets/46eeda9a-20e9-45ef-ba47-5d1612b708fd" />
+
+```js
+import React, { useState } from "react";
+
+function LogicUseStateObject() {
+  const [state, setState] = useState({
+    count: 0,
+    clicks: 3,
+    price: 300,
+    name: "tanu",
+  });
+
+  console.log({ ...state });
+  return (
+    <div>
+      <h2>learn useState non-primitive type: object </h2>{" "}
+      <div>{state.count}</div>
+      <div>{state.clicks}</div>
+      <div>{state.price}</div>
+      <div>{state.name}</div>
+      <button
+        onClick={() => {
+          setState({
+            ...state,
+            count: state.count + 1,
+            clicks: state.clicks + 2,
+            price: state.price + 2,
+            name: state.name,
+          });
+        }}
+      >
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default LogicUseStateObject;
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # What is Document Object Model?
 
 # Scoping in JavaScript:
