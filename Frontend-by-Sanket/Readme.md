@@ -75,30 +75,448 @@ export default LogicUseStateObject;
 ![image](https://github.com/user-attachments/assets/1eaf5118-62a8-4f95-bb1c-ce0d021cefd7)
 
 
+```js
+import { useState } from "react";
+
+function LogicPartUseState() {
+  const [items, setItems] = useState({ firstName: "tanu", lastName: "singh" });
+
+  const handleUpdate = () => {
+    setItems({ ...items, firstName: "abc", lastName: "xyz" });
+  };
+
+  return (
+    <div>
+      <h2>How to update the object properties</h2>
+      <h4>
+        My full name is {items.firstName} {items.lastName}{" "}
+      </h4>
+      <button onClick={handleUpdate}>Click me</button>
+    </div>
+  );
+}
+
+export default LogicPartUseState;
+
+```
+
+# How to add the items in the array
+```js
+import { useState } from "react";
+
+function LogicPartUseState() {
+  const [addTask, setAddTask] = useState(["joe", "kim", "abc"]);
+  const handleUpdate = () => {
+    setAddTask([...addTask, "sur"]);
+  };
+
+  return (
+    <div>
+      <h3>Add task here:</h3>
+      <div>
+        {addTask.map((val) => (
+          <li>{val}</li>
+        ))}
+      </div>
+      <button onClick={handleUpdate}>click me</button>
+    </div>
+  );
+}
+
+export default LogicPartUseState;
 
 
+```
 
 
+```js
+
+import { useState } from "react";
+
+function LogicPartUseState() {
+  // lazy initialisation
+
+  function expensive() {
+    console.log("hey I am lazy initialisation");
+    return 10;
+  }
+  const [count, setCount] = useState(() => expensive());
+
+  return (
+    <div>
+      <h2>I am lazy initialisation</h2>
+      <h2>{count}</h2>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+
+export default LogicPartUseState;
+
+```
+
+# How to add the items in nested objects
+
+```js
+import { useState } from "react";
+
+function LogicPartUseState() {
+  const [items, setItems] = useState({
+    firstName: "tanu",
+    lastName: "singh",
+    address: { city: "kanpur", country: "India" },
+  });
+
+  const handleUpdate = () => {
+    setItems({
+      ...items,
+      firstName: "abc",
+      address: { ...items.address, city: "lucknow" },
+    });
+  };
+
+  return (
+    <div>
+      <h2>How to update the object properties</h2>
+      <h4>
+        My full name is {items.firstName} {items.lastName}{" "}
+      </h4>
+      <h4>
+        City and country name: {items.address.city} and {items.address.country}
+      </h4>
+      <button onClick={handleUpdate}>Click me</button>
+    </div>
+  );
+}
+
+export default LogicPartUseState;
+
+```
 
 
+![image](https://github.com/user-attachments/assets/7b5ecb74-ec9d-46bd-8218-496647e08f89)
+
+```js
+import { useEffect, useState } from "react";
+
+function LearnUseEffect() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("I am useEffect Hook");
+  }, []);
+
+  return (
+    <div>
+      <h2>Learn useEffect Hook in react</h2>
+      <h2>{count}</h2>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+
+export default LearnUseEffect;
+
+```
+
+```js
+
+import { useEffect, useState } from "react";
+
+function LearnUseEffect() {
+  const [count, setCount] = useState(0);
+  const [number, setNumber] = useState(10);
+
+  useEffect(() => {
+    console.log("I am useEffect Hook");
+  }, []);
+
+  return (
+    <div>
+      <h2>Learn useEffect Hook in react</h2>
+      <h2>{count}</h2>
+      <h2>{number}</h2>
+
+      <span>
+        {" "}
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <br />
+        <button onClick={() => setNumber(number - 1)}>Decrement</button>
+      </span>
+    </div>
+  );
+}
+
+export default LearnUseEffect;
+
+```
+
+# How to add timer and use of setTimeout and clearInterval
+
+```js
+import { useEffect, useState } from "react";
+
+function LearnUseEffect() {
+  const [count, setCount] = useState(0);
+
+  // how to start timer : use of setInterval and clearInterval
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 500);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  return (
+    <div>
+      <h1>timer: {count}</h1>
+    </div>
+  );
+}
+
+export default LearnUseEffect;
+
+```
 
 
+# How to use Debouncing
+
+```js
+import { useEffect, useState } from "react";
+
+function LearnUseEffect() {
+  // how to use debounce
+  const [search, setSearch] = useState("");
+
+  const [debounce, setDebounced] = useState("");
+
+  useEffect(() => {
+    // api call
+    const timeOut = setTimeout(() => {
+      setDebounced(search);
+    }, 500);
+    return () => clearTimeout(timeOut);
+  }, [search]);
+
+  return (
+    <div>
+      <h2>{debounce}</h2>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
+  );
+}
+
+export default LearnUseEffect;
+
+```
+
+# How to use Context api 
+
+**create, provider and consumer**
+
+```js
+import { createContext } from "react";
+import ChildA from "./ChildA";
+
+const data = createContext();
+const data1 = createContext();
+
+function LearnContextApiHook() {
+  const name = "tanu";
+  const gender = "female";
+  return (
+    <div>
+      <data.Provider value={name}>
+        <data1.Provider value={gender}>
+          <h1>Learn Context api hook</h1>
+          <ChildA />
+        </data1.Provider>
+      </data.Provider>
+    </div>
+  );
+}
+
+export default LearnContextApiHook;
+export { data, data1 };
+
+```
+
+```js
+import ChildB from "./ChildB";
+
+function ChildA() {
+  return (
+    <div>
+      <h1>This is ChildA</h1>
+      <ChildB />
+    </div>
+  );
+}
+
+export default ChildA;
 
 
+```
 
+```js
+import ChildC from "./ChildC";
 
+function ChildB() {
+  return (
+    <div>
+      <h1>This is ChildB</h1>
+      <ChildC />
+    </div>
+  );
+}
 
+export default ChildB;
 
+```
 
+```js
+import { data } from "./LearnContextApiHook";
 
+function ChildC() {
+  return (
+    <div>
+      <data.Consumer>
+        {(name) => {
+          return <h1>My name is: {name}</h1>; // How to use context api
+        }}
+      </data.Consumer>
+    </div>
+  );
+}
 
+export default ChildC;
 
+```
 
+# How to use the useContext Hook
 
+**create,provider and useContext**
 
+```js
+import { createContext } from "react";
+import ChildA from "./ChildA";
 
+const data = createContext();
+const data1 = createContext();
 
+function LearnContextApiHook() {
+  const name = "tanu";
+  const gender = "female";
+  return (
+    <div>
+      <data.Provider value={name}>
+        <data1.Provider value={gender}>
+          <h1>Learn Context api hook</h1>
+          <ChildA />
+        </data1.Provider>
+      </data.Provider>
+    </div>
+  );
+}
 
+export default LearnContextApiHook;
+export { data, data1 };
+
+```
+
+```js
+import ChildB from "./ChildB";
+
+function ChildA() {
+  return (
+    <div>
+      <h1>This is ChildA</h1>
+      <ChildB />
+    </div>
+  );
+}
+
+export default ChildA;
+
+```
+
+```js
+import ChildC from "./ChildC";
+
+function ChildB() {
+  return (
+    <div>
+      <h1>This is ChildB</h1>
+      <ChildC />
+    </div>
+  );
+}
+
+export default ChildB;
+
+```
+
+```js
+import { useContext } from "react";
+import { data, data1 } from "./LearnContextApiHook";
+
+// how to use useContext Hook
+function ChildC() {
+  const name = useContext(data);
+  const gender = useContext(data1);
+  return (
+    <div>
+      <h2>
+        my name is {name} and gender is {gender}
+      </h2>
+    </div>
+  );
+}
+
+export default ChildC;
+
+```
+
+# learn useMemo hook
+
+```js
+import { useMemo, useState } from "react";
+
+function LearnUseMemoHook() {
+  const [increment, setIncrement] = useState(0);
+  const [decrement, setDecrement] = useState(100);
+
+  const multiplication = useMemo(
+    function multiply() {
+      console.log("I am  doing multiply");
+      return increment * 10;
+    },
+    [increment]
+  );
+
+  return (
+    <div>
+      <h2>Learning useMemo hook</h2>
+      <h2> {multiplication}</h2>
+      <button onClick={() => setIncrement(increment + 1)}>Increment</button>
+      <h2>{increment}</h2>
+      <button onClick={() => setDecrement(decrement - 1)}>Decrement</button>
+      <h2>{decrement}</h2>
+    </div>
+  );
+}
+
+export default LearnUseMemoHook;
+
+```
 
 
 
