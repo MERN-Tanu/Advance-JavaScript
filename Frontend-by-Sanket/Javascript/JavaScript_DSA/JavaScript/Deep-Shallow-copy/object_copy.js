@@ -1,3 +1,49 @@
+Shallow and Deep copy
+
+1. Shallow copy
+A shallow copy creates a new outer object, but nested objects are still shared by reference.
+
+ ```
+const original = {
+  name: "Tanu",
+  address: {
+    city: "Bengaluru"
+  }
+};
+
+const copy = { ...original };
+
+copy.name = "Priya";
+copy.address.city = "Delhi";
+
+console.log(original.name);         // "Tanu"
+console.log(original.address.city); // "Delhi"
+ ```
+
+const a = { ...original };
+const b = Object.assign({}, original);
+const c = [...originalArray];
+
+2. Deep copy
+A deep copy creates an independent copy of the outer object and its nested objects.
+
+ ```
+ const original = {
+  name: "Tanu",
+  address: {
+    city: "Bengaluru"
+  }
+};
+
+const copy = structuredClone(original);
+
+copy.address.city = "Delhi";
+
+console.log(original.address.city); // "Bengaluru"
+console.log(copy.address.city);    // "Delhi"
+ ```
+
+
 // let obj = {
 //   name: "peter",
 // };
